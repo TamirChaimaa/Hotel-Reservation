@@ -32,6 +32,7 @@ public class Booking {
     }
 
     @Override
+    // print a booking with the user id, room number, type, price per night, check in and check out dates and total price
     public String toString() {
         return "Booking{user=" + userId +
                 ", room=" + roomNumber +

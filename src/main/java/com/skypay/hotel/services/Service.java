@@ -16,6 +16,7 @@ public class Service {
     private ArrayList<User> users = new ArrayList<>();
     private ArrayList<Booking> bookings = new ArrayList<>();
 
+    // set a room with a number, type and price
     public void setRoom(int roomNumber, RoomType type, int price) {
         for (Room room : rooms) {
             if (room.getRoomNumber() == roomNumber) {
@@ -26,6 +27,7 @@ public class Service {
         rooms.add(new Room(roomNumber, type, price));
     }
 
+    // set a user with an id and a balance
     public void setUser(int userId, int balance) {
         for (User user : users) {
             if (user.getId() == userId) {
@@ -35,6 +37,7 @@ public class Service {
         users.add(new User(userId, balance));
     }
 
+    // book a room with a user id, room number, check in and check out dates
     public void bookRoom(int userId, int roomNumber,
                          LocalDate checkIn, LocalDate checkOut) {
 
@@ -66,6 +69,7 @@ public class Service {
         bookings.add(new Booking(userId, room, checkIn, checkOut));
     }
 
+    // print all rooms, users and bookings
     public void printAll() {
         System.out.println("=== ROOMS ===");
         for (int i = rooms.size() - 1; i >= 0; i--) {

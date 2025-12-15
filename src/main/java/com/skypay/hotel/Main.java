@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
         Service service = new Service();
-
+    
         service.setRoom(1, RoomType.STANDARD_SUITE, 1000);
         service.setRoom(2, RoomType.JUNIOR_SUITE, 2000);
         service.setRoom(3, RoomType.MASTER_SUITE, 3000);

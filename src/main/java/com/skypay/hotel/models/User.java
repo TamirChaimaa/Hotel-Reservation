@@ -4,6 +4,7 @@ public class User {
     private int id;
     private int balance;
 
+    // create a user with an id and a balance
     public User(int id, int balance) {
         if (balance < 0) {
             throw new IllegalArgumentException("Balance cannot be negative");
@@ -12,14 +13,17 @@ public class User {
         this.balance = balance;
     }
 
+    // get the user id
     public int getId() {
         return id;
     }
 
+    // get the user balance
     public int getBalance() {
         return balance;
     }
 
+    // debit the user balance
     public void debit(int amount) {
         if (amount > balance) {
             throw new IllegalArgumentException("Insufficient balance");
